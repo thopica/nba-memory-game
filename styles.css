@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    padding: 20px; /* Add some padding for smaller screens */
 }
 
 /* Hero section styles */
@@ -72,4 +73,64 @@ body {
 /* Visible image styles */
 .tile.show img {
     display: block;
+}
+
+/* Celebration message styles */
+.celebration-message {
+    font-size: 24px;
+    color: #ff6600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive design for tablets and mobile devices */
+@media (max-width: 768px) {
+    /* Adjust grid size for smaller screens */
+    .game-board {
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: repeat(4, 80px);
+        gap: 8px;
+    }
+
+    /* Adjust tile size for smaller screens */
+    .tile {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Adjust timer font size for smaller screens */
+    #timer {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust grid size for mobile screens */
+    .game-board {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(4, 60px);
+        gap: 6px;
+    }
+
+    /* Adjust tile size for mobile screens */
+    .tile {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Adjust button size for mobile screens */
+    #startButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust timer font size for mobile screens */
+    #timer {
+        font-size: 18px;
+    }
+
+    /* Adjust hero section padding for mobile screens */
+    .hero {
+        padding: 15px;
+    }
 }
